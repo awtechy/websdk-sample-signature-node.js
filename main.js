@@ -25,5 +25,7 @@ var apiKey = process.env.API_KEY,
     apiSecret = process.env.API_SECRET,
     meetingNumber = req.body.meetingNumber,
     role = req.body.role,
+    userName = req.body.userName,
+    userEmail = req.body.userEmail,
     meetingPassword = req.body.meetingPassword;
 app.listen(port, () => console.log(`Zoom Web SDK Sample Signature Node.js on port ${port}!`))
