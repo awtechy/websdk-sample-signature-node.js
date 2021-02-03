@@ -27,13 +27,18 @@ ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.8.5/lib', '/av');
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk;
-
-	ZoomMtg.join({
+var signature = "<%= signature %>",
+    meetingNumber = "<%= meetingNumber %>",
+    apiKey = "<%= apiKey %>",
+    userEmail = "<%= userEmail %>",    
+    userName = "<%= userName %>",
+    meetingPassword = "<%= meetingPassword %>";
+       ZoomMtg.join({
 	  signature: signature,
 	  meetingNumber: meetingNumber,
 	  apiKey: apiKey,
 	  userEmail: userEmail,
-    userName: userName,
+          userName: userName,
 	  passWord: meetingPassword,
 	  success: (success) => {
 	    alert(success);
