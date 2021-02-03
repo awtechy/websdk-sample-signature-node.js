@@ -22,6 +22,7 @@ app.post('/', (req, res) => {
   })
 })
 var apiKey = process.env.API_KEY,
+    apiSecret = process.env.API_SECRET,
     meetingNumber = req.body.meetingNumber,
     role = req.body.role,
     meetingPassword = req.body.meetingPassword;
