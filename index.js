@@ -21,11 +21,11 @@ app.post('/', (req, res) => {
     signature: signature
   })
 })
-var apiKey = process.env.API_KEY,
-    apiSecret = process.env.API_SECRET,
-    meetingNumber = req.body.meetingNumber,
-    role = req.body.role,
-    userName = req.body.userName,
-    userEmail = req.body.userEmail,
-    meetingPassword = req.body.meetingPassword;
+const apiKey = process.env.API_KEY;
+const apiSecret = process.env.API_SECRET;
+const meetingNumber = req.body.meetingNumber;
+const role = req.body.role;
+const userName = req.body.userName;
+const userEmail = req.body.userEmail;
+const meetingPassword = req.body.meetingPassword;
 app.listen(port, () => console.log(`Zoom Web SDK Sample Signature Node.js on port ${port}!`))
