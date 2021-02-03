@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- import #zmmtg-root css -->
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.8.5/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.8.5/css/react-select.css" />
+</head>
+
+<body>
+    <!-- import ZoomMtg dependencies -->
+    <script src="https://source.zoom.us/1.8.5/lib/vendor/react.min.js"></script>
+    <script src="https://source.zoom.us/1.8.5/lib/vendor/react-dom.min.js"></script>
+    <script src="https://source.zoom.us/1.8.5/lib/vendor/redux.min.js"></script>
+    <script src="https://source.zoom.us/1.8.5/lib/vendor/redux-thunk.min.js"></script>
+    <script src="https://source.zoom.us/1.8.5/lib/vendor/lodash.min.js"></script>
+
+    <!-- import ZoomMtg -->
+    <script src="https://source.zoom.us/zoom-meeting-1.8.5.min.js"></script>
+    
+    <!-- import local .js file -->
+    <script src="./websdk-master/index.js"></script>
+
+<script>
+
+ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.8.5/lib', '/av'); 
+
+ZoomMtg.preLoadWasm();
+ZoomMtg.prepareJssdk;
+
+	ZoomMtg.join({
+	  signature: signature,
+	  meetingNumber: meetingNumber,
+	  apiKey: apiKey,
+	  userEmail: userEmail,
+    userName: userName,
+	  passWord: meetingPassword,
+	  success: (success) => {
+	    alert(success);
+	  },
+	  error: (error) => {
+	    alert(error);
+	  }
+	});
+</script>
+</body>
+</html>
