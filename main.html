@@ -26,12 +26,12 @@ ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.8.5/lib', '/av');
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk;
-var signature = "<?= $_POST['signature']; ?>",
-    meetingNumber = "<?= $_POST['meetingNumber']; ?>",
-    apiKey = "<?= $_POST['apiKey']; ?>",
-    userEmail = "<?= $_POST['userEmail']; ?>",    
-    userName = "<?= $_POST['userName']; ?>",
-    meetingPassword = "<?= $_POST['meetingPassword']; ?>";
+var signature = "<?= json_decode($_POST['signature']); ?>",
+    meetingNumber = "<?= json_decode($_POST['meetingNumber']); ?>",
+    apiKey = "<?= json_decode($_POST['apiKey']); ?>",
+    userEmail = "<?= json_decode($_POST['userEmail']); ?>",    
+    userName = "<?= json_decode($_POST['userName']); ?>",
+    meetingPassword = "<?= json_decode($_POST['meetingPassword']); ?>";
        ZoomMtg.join({
 	  signature: signature,
 	  meetingNumber: meetingNumber,
